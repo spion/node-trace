@@ -39,7 +39,7 @@ function transformModule(name, fileFilter) {
 }
 
 
-var rmod = resolve.sync(argv._[0], {basedir: process.cwd()});
+var rmod = resolve.sync('./' + argv._[0], {basedir: process.cwd()});
 
 loadModule.tracingEnabled = true;
 process.argv = argv._;

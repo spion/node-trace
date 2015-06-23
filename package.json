@@ -17,7 +17,7 @@
   "author": "spion",
   "license": "MIT",
   "dependencies": {
-    "falafel": "^0.3.1",
+    "falafel": "^1.1.0",
     "resolve": "^0.6.1",
     "optimist": "^0.6.1"
   }

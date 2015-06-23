@@ -1,7 +1,12 @@
 var falafel = require('falafel');
 
 function instrumentSource(src) {
-    var out = falafel(src, {loc: true}, function(node) {
+    var opts = {
+        ecmaVersion: 6,
+        allowHashBang: true,
+        locations: true
+    };
+    var out = falafel(src, opts, function(node) {
         if ((node.type === 'FunctionDeclaration') ||
             (node.type === 'FunctionExpression')) {
             instrumentFunctionBody(node.body, node.id);
